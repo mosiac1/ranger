@@ -1,0 +1,7 @@
+/target/
+/bin/
+/target
+.settings/
+.pydevproject
+*.log
+dependency-reduced-pom.xml

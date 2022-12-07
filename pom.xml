@@ -180,6 +180,7 @@
         <paranamer.version>2.3</paranamer.version>
         <presto.version>333</presto.version>
         <trino.version>377</trino.version>
+        <openmetadata.version>0.12.1.preview</openmetadata.version>
         <poi.version>5.2.2</poi.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <protobuf-java.version>3.19.3</protobuf-java.version>
@@ -294,6 +295,7 @@
                 <module>ranger-util</module>
                 <module>plugin-kms</module>
                 <module>tagsync</module>
+                <module>plugin-openmetadata</module>
                 <module>ranger-hdfs-plugin-shim</module>
                 <module>ranger-plugin-classloader</module>
                 <module>ranger-hive-plugin-shim</module>
@@ -363,6 +365,7 @@
                 <module>ranger-util</module>
                 <module>plugin-kms</module>
                 <module>tagsync</module>
+                <module>plugin-openmetadata</module>
                 <module>ranger-hdfs-plugin-shim</module>
                 <module>ranger-plugin-classloader</module>
                 <module>ranger-hive-plugin-shim</module>
@@ -637,6 +640,31 @@
             </modules>
         </profile>
         <profile>
+            <id>ranger-openmetadata-plugin</id>
+            <modules>
+                <module>agents-audit</module>
+                <module>agents-common</module>
+                <module>agents-cred</module>
+                <module>agents-installer</module>
+                <module>credentialbuilder</module>
+                <module>ranger-plugin-classloader</module>
+                <module>ranger-util</module>
+                <module>plugin-openmetadata</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>ranger-nestedstructure-plugin</id>
+            <modules>
+                <module>agents-audit</module>
+                <module>agents-common</module>
+                <module>agents-cred</module>
+                <module>agents-installer</module>
+                <module>credentialbuilder</module>
+                <module>ranger-util</module>
+                <module>plugin-nestedstructure</module>
+            </modules>
+        </profile>
+        <profile>
             <id>linux</id>
             <activation>
                 <os>
@@ -675,6 +703,7 @@
                 <module>ranger-util</module>
                 <module>plugin-kms</module>
                 <module>tagsync</module>
+                <module>plugin-openmetadata</module>
                 <module>ranger-hdfs-plugin-shim</module>
                 <module>ranger-plugin-classloader</module>
                 <module>ranger-hive-plugin-shim</module>
@@ -759,6 +788,7 @@
                 <module>ranger-util</module>
                 <module>plugin-kms</module>
                 <module>tagsync</module>
+                <module>plugin-openmetadata</module>
                 <module>ranger-hdfs-plugin-shim</module>
                 <module>ranger-plugin-classloader</module>
                 <module>ranger-hive-plugin-shim</module>

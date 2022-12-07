@@ -1,0 +1,1196 @@
+{
+    "id": 206,
+    "name": "openmetadata",
+    "displayName": "openmetadata",
+    "implClass": "org.apache.ranger.services.openmetadata.RangerServiceOpenmetadata",
+    "label": "OpenMetadata",
+    "description": "OpenMetadata",
+    "guid": "f517cfd0-4275-4485-9d40-895c63f25731",
+    "resources": [
+        {
+            "itemId": 10,
+            "name": "database_service",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Database Service",
+            "description": "OpenMetadata Database Service",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 12,
+            "name": "database",
+            "type": "string",
+            "level": 20,
+            "parent": "database_service",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Database",
+            "description": "OpenMetadata Database",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 13,
+            "name": "database_schema",
+            "type": "string",
+            "level": 30,
+            "parent": "database",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Database Schema",
+            "description": "OpenMetadata Database Schema",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 14,
+            "name": "table",
+            "type": "string",
+            "level": 40,
+            "parent": "database_schema",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Table",
+            "description": "OpenMetadata Table",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "ViewUsage",
+                "ViewTests",
+                "ViewQueries",
+                "ViewDataProfile",
+                "ViewSampleData",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditTags",
+                "EditOwner",
+                "EditCustomFields",
+                "EditTests",
+                "EditQueries",
+                "EditDataProfile",
+                "EditSampleData",
+                "EditLineage"
+            ]
+        },
+        {
+            "itemId": 15,
+            "name": "column",
+            "type": "string",
+            "level": 50,
+            "parent": "table",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Table Column",
+            "description": "OpenMetadata Column",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditTags"
+            ]
+        },
+        {
+            "itemId": 20,
+            "name": "dashboard_service",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Dashboard Service",
+            "description": "OpenMetadata Dashboard Service",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 21,
+            "name": "dashboard",
+            "type": "string",
+            "level": 20,
+            "parent": "dashboard_service",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Dashboard",
+            "description": "OpenMetadata Dashboard",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "ViewUsage",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditTags",
+                "EditOwner",
+                "EditTier",
+                "EditCustomFields",
+                "EditLineage"
+            ]
+        },
+        {
+            "itemId": 22,
+            "name": "chart",
+            "type": "string",
+            "level": 30,
+            "parent": "dashboard",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Dashboard Chart",
+            "description": "OpenMetadata Dashboard Chart",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "ViewUsage",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditTags",
+                "EditOwner",
+                "EditTier",
+                "EditCustomFields",
+                "EditLineage"
+            ]
+        },
+        {
+            "itemId": 30,
+            "name": "pipeline_service",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Pipeline Service",
+            "description": "OpenMetadata Pipeline Service",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 31,
+            "name": "pipeline",
+            "type": "string",
+            "level": 20,
+            "parent": "pipeline_service",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Pipeline",
+            "description": "OpenMetadata Pipeline",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields",
+                "EditLineage",
+                "EditStatus"
+            ]
+        },
+        {
+            "itemId": 40,
+            "name": "mlmodel_service",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata MlModel Service",
+            "description": "OpenMetadata MlModel Service",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 41,
+            "name": "mlmodel",
+            "type": "string",
+            "level": 20,
+            "parent": "mlmodel_service",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata MlModel",
+            "description": "OpenMetadata MlModel",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 50,
+            "name": "messaging_service",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Messaging Service",
+            "description": "OpenMetadata Messaging Service",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 51,
+            "name": "topic",
+            "type": "string",
+            "level": 20,
+            "parent": "messaging_service",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Topic",
+            "description": "OpenMetadata Topic",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 60,
+            "name": "storage_service",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Messaging Service",
+            "description": "OpenMetadata Messaging Service",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 61,
+            "name": "location",
+            "type": "string",
+            "level": 20,
+            "parent": "storage_service",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Messaging Service",
+            "description": "OpenMetadata Messaging Service",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 70,
+            "name": "metadata_service",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Messaging Service",
+            "description": "OpenMetadata Messaging Service",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 80,
+            "name": "glossary",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Glossary",
+            "description": "OpenMetadata Glossary",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 81,
+            "name": "glossary_term",
+            "type": "string",
+            "level": 20,
+            "parent": "glossary",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Glossary Term",
+            "description": "OpenMetadata Glossary Term",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 90,
+            "name": "tag_category",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Tag Category",
+            "description": "OpenMetadata Tag Category",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 91,
+            "name": "tag",
+            "type": "string",
+            "level": 20,
+            "parent": "tag_category",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Tag",
+            "description": "OpenMetadata Tag",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 100,
+            "name": "bot",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Tag Category",
+            "description": "OpenMetadata Tag Category",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 110,
+            "name": "ingestion_pipeline",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Tag Category",
+            "description": "OpenMetadata Tag Category",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 120,
+            "name": "user",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Tag Category",
+            "description": "OpenMetadata Tag Category",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields"
+            ]
+        },
+        {
+            "itemId": 130,
+            "name": "team",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Tag Category",
+            "description": "OpenMetadata Tag Category",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields",
+                "EditUsers"
+            ]
+        },
+        {
+            "itemId": 140,
+            "name": "events",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Tag Category",
+            "description": "OpenMetadata Tag Category",
+            "accessTypeRestrictions": [
+                "ViewAll"
+            ]
+        },
+        {
+            "itemId": 150,
+            "name": "feed",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Feed",
+            "description": "OpenMetadata Feed",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll"
+            ]
+        },
+        {
+            "itemId": 160,
+            "name": "webhook",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Webhook",
+            "description": "OpenMetadata Webhook",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll"
+            ]
+        },
+        {
+            "itemId": 170,
+            "name": "type",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Custom Type",
+            "description": "OpenMetadata Custom Type",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditAll",
+                "EditDescription",
+                "EditDisplayName"
+            ]
+        },
+        {
+            "itemId": 180,
+            "name": "test_suite",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Test Suite",
+            "description": "OpenMetadata Test Suite",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll"
+            ]
+        },
+        {
+            "itemId": 181,
+            "name": "test_case",
+            "type": "string",
+            "level": 20,
+            "parent": "test_suite",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Test Case",
+            "description": "OpenMetadata Test Case",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll"
+            ]
+        },
+        {
+            "itemId": 182,
+            "name": "test_definition",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Test Definition",
+            "description": "OpenMetadata Test Definition",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll"
+            ]
+        }
+    ],
+    "accessTypes": [
+        {
+            "itemId": 1,
+            "name": "ViewAll",
+            "label": "View",
+            "impliedGrants": [
+                "ViewUsage",
+                "ViewTests",
+                "ViewQueries",
+                "ViewDataProfile",
+                "ViewSampleData"
+            ]
+        },
+        {
+            "itemId": 11,
+            "name": "ViewUsage",
+            "label": "View Usage",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 12,
+            "name": "ViewTests",
+            "label": "View Tests",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 13,
+            "name": "ViewQueries",
+            "label": "View Queries",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 14,
+            "name": "ViewDataProfile",
+            "label": "View Data Profile",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 15,
+            "name": "ViewSampleData",
+            "label": "View Sample Data",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 2,
+            "name": "Create",
+            "label": "Create",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 3,
+            "name": "Delete",
+            "label": "Delete",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 4,
+            "name": "EditAll",
+            "label": "Edit",
+            "impliedGrants": [
+                "EditDescription",
+                "EditDisplayName",
+                "EditCustomFields",
+                "EditTags",
+                "EditOwner",
+                "EditTier",
+                "EditLineage",
+                "EditStatus",
+                "EditReviewers",
+                "EditTests",
+                "EditQueries",
+                "EditDataProfile",
+                "EditSampleData",
+                "EditUsers"
+            ]
+        },
+        {
+            "itemId": 401,
+            "name": "EditDescription",
+            "label": "Edit Description",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 402,
+            "name": "EditDisplayName",
+            "label": "Edit Display Name",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 403,
+            "name": "EditCustomFields",
+            "label": "Edit Custom Fields",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 404,
+            "name": "EditTags",
+            "label": "Edit Tags",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 405,
+            "name": "EditOwner",
+            "label": "Edit Owner",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 406,
+            "name": "EditTier",
+            "label": "Edit Tier",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 407,
+            "name": "EditLineage",
+            "label": "Edit Lineage",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 408,
+            "name": "EditStatus",
+            "label": "Edit Status",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 409,
+            "name": "EditReviewers",
+            "label": "Edit Reviewers",
+            "impliedGrants": []
+        },
+        {
+            "itemId": "410",
+            "name": "EditTests",
+            "label": "Edit Tests",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 411,
+            "name": "EditQueries",
+            "label": "Edit Queries",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 412,
+            "name": "EditDataProfile",
+            "label": "Edit Data Profile",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 413,
+            "name": "EditSampleData",
+            "label": "Edit Sample Data",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 414,
+            "name": "EditUsers",
+            "label": "Edit Users",
+            "impliedGrants": []
+        }
+    ],
+    "configs": [
+        {
+            "itemId": 1,
+            "name": "username",
+            "type": "string",
+            "mandatory": true,
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "Username"
+        },
+        {
+            "itemId": 2,
+            "name": "endpoint",
+            "type": "string",
+            "mandatory": true,
+            "validationRegEx": "",
+            "validationMessage": "",
+            "label": "OpenMetadata API endpoint",
+            "uiHint": ""
+        },
+        {
+            "itemId": 3,
+            "name": "token",
+            "type": "string",
+            "mandatory": true,
+            "validationRegEx": "",
+            "validationMessage": "",
+            "label": "User JWT token",
+            "uiHint": ""
+        }
+    ],
+    "enums": [],
+    "contextEnrichers": [],
+    "policyConditions": []
+}
