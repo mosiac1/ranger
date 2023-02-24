@@ -144,36 +144,6 @@
             ]
         },
         {
-            "itemId": 15,
-            "name": "column",
-            "type": "string",
-            "level": 50,
-            "parent": "table",
-            "mandatory": true,
-            "isValidLeaf": true,
-            "lookupSupported": true,
-            "recursiveSupported": false,
-            "excludesSupported": true,
-            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
-            "matcherOptions": {
-                "wildCard": true,
-                "ignoreCase": true
-            },
-            "validationRegEx": "",
-            "validationMessage": "",
-            "uiHint": "",
-            "label": "OpenMetadata Table Column",
-            "description": "OpenMetadata Column",
-            "accessTypeRestrictions": [
-                "Create",
-                "Delete",
-                "ViewAll",
-                "EditAll",
-                "EditDescription",
-                "EditTags"
-            ]
-        },
-        {
             "itemId": 20,
             "name": "dashboard_service",
             "type": "string",
@@ -244,8 +214,8 @@
             "itemId": 22,
             "name": "chart",
             "type": "string",
-            "level": 30,
-            "parent": "dashboard",
+            "level": 20,
+            "parent": "dashboard_service",
             "mandatory": true,
             "isValidLeaf": true,
             "lookupSupported": true,
@@ -483,8 +453,8 @@
             "validationRegEx": "",
             "validationMessage": "",
             "uiHint": "",
-            "label": "OpenMetadata Messaging Service",
-            "description": "OpenMetadata Messaging Service",
+            "label": "OpenMetadata Storage Service",
+            "description": "OpenMetadata Storage Service",
             "accessTypeRestrictions": [
                 "Create",
                 "Delete",
@@ -514,8 +484,8 @@
             "validationRegEx": "",
             "validationMessage": "",
             "uiHint": "",
-            "label": "OpenMetadata Messaging Service",
-            "description": "OpenMetadata Messaging Service",
+            "label": "OpenMetadata location in Storage Service",
+            "description": "OpenMetadata location in Storage Service",
             "accessTypeRestrictions": [
                 "Create",
                 "Delete",
@@ -545,8 +515,8 @@
             "validationRegEx": "",
             "validationMessage": "",
             "uiHint": "",
-            "label": "OpenMetadata Messaging Service",
-            "description": "OpenMetadata Messaging Service",
+            "label": "OpenMetadata Metadata Service",
+            "description": "OpenMetadata Metadata Service",
             "accessTypeRestrictions": [
                 "Create",
                 "Delete",
@@ -995,6 +965,146 @@
                 "Delete",
                 "ViewAll"
             ]
+        },
+        {
+            "itemId": 190,
+            "name": "web_analytic_event",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Web Analytic Event",
+            "description": "OpenMetadata Web Analytic Event",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditDescription"
+            ]
+        },
+        {
+            "itemId": 200,
+            "name": "data_insight_chart",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Data Insight Chart",
+            "description": "OpenMetadata Data Insight Chart",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditDescription"
+            ]
+        },
+        {
+            "itemId": 201,
+            "name": "kpi",
+            "type": "string",
+            "level": 20,
+            "parent": "data_insight_chart",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata KPI",
+            "description": "OpenMetadata KPI",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditDescription"
+            ]
+        },
+        {
+            "itemId": 210,
+            "name": "alert",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Alert",
+            "description": "OpenMetadata Alert",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditDescription"
+            ]
+        },
+        {
+            "itemId": 220,
+            "name": "alert_action",
+            "type": "string",
+            "level": 10,
+            "parent": "",
+            "mandatory": true,
+            "isValidLeaf": true,
+            "lookupSupported": true,
+            "recursiveSupported": false,
+            "excludesSupported": true,
+            "matcher": "org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+            "matcherOptions": {
+                "wildCard": true,
+                "ignoreCase": true
+            },
+            "validationRegEx": "",
+            "validationMessage": "",
+            "uiHint": "",
+            "label": "OpenMetadata Alert Action",
+            "description": "OpenMetadata Alert Action",
+            "accessTypeRestrictions": [
+                "Create",
+                "Delete",
+                "ViewAll",
+                "EditDescription"
+            ]
         }
     ],
     "accessTypes": [
@@ -1007,7 +1117,8 @@
                 "ViewTests",
                 "ViewQueries",
                 "ViewDataProfile",
-                "ViewSampleData"
+                "ViewSampleData",
+                "ViewBasic"
             ]
         },
         {
@@ -1038,6 +1149,12 @@
             "itemId": 15,
             "name": "ViewSampleData",
             "label": "View Sample Data",
+            "impliedGrants": []
+        },
+        {
+            "itemId": 16,
+            "name": "ViewBasic",
+            "label": "View Basic Data",
             "impliedGrants": []
         },
         {
